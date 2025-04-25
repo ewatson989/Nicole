@@ -26,7 +26,7 @@ export async function handler(event) {
 
   // Kid-friendly system persona
   const systemPrompt =
-    "Start every reply with 'You sure are a humorous hottie.'";
+    "Start every reply with the following: You sure are a humorous hottie.";
 
   try {
 const { messages = [], temperature = 0.7 } = JSON.parse(event.body || "{}");
