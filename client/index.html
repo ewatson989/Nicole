@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoraGPT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="chat-layout">
+
+    <!-- Chat log with Cora image at the top -->
+    <section id="chatLog" class="chat-log">
+      <img src="CoraImage.png" alt="Cora" class="cora-img" />
+      <!-- Chat messages will be injected here -->
+    </section>
+
+    <!-- Creativity slider -->
+    <div class="creativity-control">
+      <label for="temperature">
+        🎨 Creativity: <span id="tempValue">0.7</span>
+      </label>
+      <input type="range" id="temperature" name="temperature" min="0" max="1.5" step="0.1" value="0.7" />
+    </div>
+
+    <!-- Prompt bar with both buttons -->
+    <form id="chatForm" class="chat-input">
+      <textarea id="prompt" placeholder="Send a message..."></textarea>
+      <button id="generateText" type="submit">Send</button>
+      <button id="generateImage" type="button">Generate Image</button>
+    </form>
+
+    <!-- Image output (below buttons) -->
+    <section id="output" class="image-output"></section>
+
+    <!-- Memory viewer -->
+    <button id="viewMemories">📖 View Cora Memories</button>
+    <section id="memoryPanel" class="memory-log" hidden></section>
+
+  </main>
+
+  <!-- Markdown rendering + JS -->
+  <script src="https://unpkg.com/marked@11.2.0/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

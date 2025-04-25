@@ -1,0 +1,9 @@
+[build]
+  publish = "client"
+
+[functions]
+  directory    = "netlify/functions"
+  node_bundler = "esbuild"     # 👈 MUST have this line
+
+[functions."*"]
+  timeout = 26                 # (your Pro-plan limit)

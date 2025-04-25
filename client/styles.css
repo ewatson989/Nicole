@@ -1,0 +1,165 @@
+/* Full height baseline */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f9f9f9;
+}
+
+main.chat-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Chat log */
+.chat-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Plain message rows */
+.chat-message {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.chat-message.user {
+  text-align: right;
+  color: #2d7efb;
+  font-weight: 500;
+}
+
+.chat-message.assistant {
+  text-align: left;
+  color: #333;
+}
+
+/* No bubbles */
+.chat-message .bubble {
+  all: unset;
+}
+
+.toolbar {
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.copy-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+
+/* Prompt input bar */
+.chat-input {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background: white;
+  gap: 0.5rem;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 48px;
+  line-height: 1.3;
+}
+
+.chat-input button {
+  height: 48px;
+  padding: 0 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #2d7efb;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.chat-input button:hover {
+  background: #276ee4;
+}
+
+/* Cora image */
+.cora-img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+/* Image result section */
+.image-output img {
+  max-width: 100%;
+  padding: 1rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Scrollbar */
+.chat-log::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-log::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 6px;
+}
+
+.creativity-control {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.creativity-control input[type="range"] {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.memory-log {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+}
+
+.memory-item {
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
